@@ -1,0 +1,39 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://vdsi.com/springbootsoapwsexample"
+           targetNamespace="http://vdsi.com/springbootsoapwsexample"
+           elementFormDefault="qualified">
+
+           
+<xs:complexType name="employee">
+	<xs:sequence>	
+		<xs:element name="eid" type="xs:string"/>
+		<xs:element name="ename" type="xs:string"/>
+		<xs:element name="esalary" type="xs:double"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:element name="getEmployeeDetailsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ename" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+</xs:element>
+
+<xs:element name="getEmployeeDetailsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee"/>
+			</xs:sequence>
+		</xs:complexType>
+</xs:element>
+
+
+
+
+
+
+
+
+
+</xs:schema>
